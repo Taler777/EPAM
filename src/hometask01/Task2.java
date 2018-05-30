@@ -39,7 +39,6 @@ public class Task2 {
         for (int i = 0; i < arrayList.size(); i++) {
             System.out.println("[" + i + "] = " + arrayList.get(i));
         }
-        return;
     }
 
     public static void main(String[] args) {
