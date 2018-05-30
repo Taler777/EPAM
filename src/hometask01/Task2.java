@@ -1,5 +1,6 @@
 package hometask01;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Task2 {
@@ -21,26 +22,22 @@ public class Task2 {
         return size;
     }
 
-    public double[] fillArray(int size) {
-        double[] array = new double[size];
+    public ArrayList fillArray(int size) {
+        ArrayList arrayList = new ArrayList<Double>();
+        double element = 0;
         for (int i = 0; i < size; i++) {
-            array[i] = 1 / Math.pow(size + 1, 2);
-        }
-        return array;
-    }
-
-    public void searchAndPrintMinIndex(double[] array) {
-        double min = 0;
-        int indexMin = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (min > array[i]) {
-                min = array[i];
-                indexMin = i;
+            element = 1 / Math.pow(i + 1, 2);
+            if (element < Math.exp(1)) {
+                arrayList.add(element);
             }
         }
-        System.out.println("Minimum element is " + indexMin);
-        for (int i = 0; i < array.length; i++) {
-            System.out.println("array[" + i + "] = " + array[i]);
+        return arrayList;
+    }
+
+    public void searchAndPrintMinIndex(ArrayList<Double> arrayList) {
+        System.out.println("The minimum index of the collection is number 0");
+        for (int i = 0; i < arrayList.size(); i++) {
+            System.out.println("[" + i + "] = " + arrayList.get(i));
         }
         return;
     }
