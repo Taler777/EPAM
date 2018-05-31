@@ -3,6 +3,12 @@ package hometask01;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/*
+Найти наименьший номер элемента последовательности, для которого выполняется
+условие a[n] < e. Вывести на экран этот номер и все элементы a[i] где i = 1, 2, ..., n.
+a[n]=1/(n+1)2
+ */
+
 public class Task2 {
     public int askCount() {
         int size;
