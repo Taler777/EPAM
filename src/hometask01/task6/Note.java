@@ -1,0 +1,1 @@
+package hometask01.task6;public class Note {    String singleNote;    int key;    static int counter = 0;    public Note(String singleNote) {        this.singleNote = singleNote;        counter++;        key = counter;    }}
