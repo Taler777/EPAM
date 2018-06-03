@@ -1,5 +1,9 @@
 package hometask01.task6;
-
+/**
+ * @author Aleksei Sypchenko
+ * @version 1.0.0
+ * @since 1.8
+ */
 import java.util.Scanner;
 import java.util.TreeMap;
 
