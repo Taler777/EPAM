@@ -1,0 +1,9 @@
+class 1
+final 1
+int 1
+long 1
+package 1
+private 3
+public 4
+static 2
+void 2
