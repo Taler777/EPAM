@@ -11,8 +11,8 @@ import java.io.*;
 import java.util.TreeMap;
 
 public class KeyWordsWithBytes {
-    private static String FILE_NAME = "src\\java\\hometask04\\task1\\SampleClass.java";
-    private static String FILE_NAME_OUT = "src\\java\\hometask04\\task1\\keywordsWithBytes.txt";
+    private static final String FILE_NAME = "src\\java\\hometask04\\task1\\SampleClass.java";
+    private static final String FILE_NAME_OUT = "src\\java\\hometask04\\task1\\keywordsWithBytes.txt";
     private String[] wordsList = {"abstract", "assert", "boolean", "break", "byte",
             "case", "catch", "char", "class", "const",
             "continue", "default", "do", "double", "else",
