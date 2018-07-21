@@ -48,9 +48,10 @@ public class KeyWordsWithBytes {
         try {
             FileInputStream in = new FileInputStream(file);
             BufferedInputStream input = new BufferedInputStream(in);
-            while (input.read(b) != -1) ;
-            for (byte symbol : b) {
-                sb.append((char) symbol);
+            while (input.read(b) != -1) {
+                for (byte symbol : b) {
+                    sb.append((char) symbol);
+                }
             }
             input.close();
             in.close();
@@ -67,7 +68,7 @@ public class KeyWordsWithBytes {
         for (String word : wordsInFile) {
             for (String keyword : wordsList) {
                 if (word.equals(keyword)) {
-                    wordsAndCount.put(keyword, wordsAndCount.get(keyword)+1);
+                    wordsAndCount.put(keyword, wordsAndCount.get(keyword) + 1);
                 }
             }
         }
@@ -84,9 +85,9 @@ public class KeyWordsWithBytes {
                 for (int i = 0; i < chars.length; i++) {
                     b[i] = (byte) chars[i];
                 }
-                if (wordsAndCount.get(s)!=0) {
+                if (wordsAndCount.get(s) != 0) {
                     String stringLine = new String();
-                    stringLine+=s + " "+ wordsAndCount.get(s) +"\r\n";
+                    stringLine += s + " " + wordsAndCount.get(s) + "\r\n";
                     output.write(stringLine.getBytes());
                 }
             }
