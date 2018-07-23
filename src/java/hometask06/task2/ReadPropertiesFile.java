@@ -1,4 +1,4 @@
-package hometask06;
+package hometask06.task2;
 /*
 Задание 2. Использование Map
 
