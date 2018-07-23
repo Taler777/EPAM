@@ -20,12 +20,11 @@ import java.util.Properties;
 import java.util.TreeMap;
 
 public class ReadPropertiesFile {
-    private static final String PROPS_FILE_NAME = "\\props.properties";
     private static Properties properties = new Properties();
     static TreeMap<String, String> treeMap = new TreeMap<>();
 
-    static void setUp(String fileName, String[] keys) {
-        try (InputStream in = ReadPropertiesFile.class.getResourceAsStream(PROPS_FILE_NAME)) {
+    static void readProperties(String fileName, String[] keys) {
+        try (InputStream in = ReadPropertiesFile.class.getResourceAsStream(fileName)) {
             properties.load(in);
             for (String key : keys) {
                 treeMap.put(key, properties.getProperty(key));
@@ -38,8 +37,9 @@ public class ReadPropertiesFile {
     }
 
     public static void main(String[] args) {
+        final String PROPS_FILE_NAME = "\\props.properties";
         String[] keys = {"prop1", "prop2", "prop3", "prop4", "prop5"};
-        ReadPropertiesFile.setUp(PROPS_FILE_NAME, keys);
+        ReadPropertiesFile.readProperties(PROPS_FILE_NAME, keys);
         for (String s : treeMap.keySet()) {
             System.out.println(s + " = " + treeMap.get(s));
         }
