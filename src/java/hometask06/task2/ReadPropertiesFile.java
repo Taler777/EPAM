@@ -23,7 +23,7 @@ public class ReadPropertiesFile {
     private static Properties properties = new Properties();
     static TreeMap<String, String> treeMap = new TreeMap<>();
 
-    static void readProperties(String fileName, String[] keys) {
+    static TreeMap<String, String> readProperties(String fileName, String[] keys) {
         try (InputStream in = ReadPropertiesFile.class.getResourceAsStream(fileName)) {
             properties.load(in);
             for (String key : keys) {
@@ -34,6 +34,7 @@ public class ReadPropertiesFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return treeMap;
     }
 
     public static void main(String[] args) {
